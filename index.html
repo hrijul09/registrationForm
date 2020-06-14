@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <style>
+            .img-right-side{
+            background-color: black;
+            }
+            .bod{
+                background-image: url('images/real_banner.png' );
+                /* Full height */
+                height: 100%; 
+               /* Center and scale the image nicely */
+                background-position: center; 
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img-fluid{
+                width: 1000px;
+                height: 400px;
+            }
+            .txt-left-side{
+                background-color:#4F3D1E;
+                color: black;
+            }
+        </style>   
+        <title> Login Form</title>
+        <link rel = "icon" type = "image/png" href = "images/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script>
+            addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+        </script>
+        <!-- Meta tags -->
+        <!-- font-awesome icons -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- //font-awesome icons -->
+        <!--stylesheets-->
+        <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+        <!--//style sheet end here-->
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+    <body id="qwerty" class="bod">
+        <h1 style="opacity:1;color: #f1d619;" id="hea" class="error"></h1>
+        <div  style="background-color:#141A2D;text-align: center;margin-right: 20%;margin-left:20%;">
+        <p id="hea2" style=" color: #f1d619;"><strong> </strong>  </p>
+        <p id="hea3" style=" color: #f1d619;"><strong> </strong>  </p>
+        <p id="hea4" style=" color: #f1d619;"><strong> </strong>  </p>
+        <p id="hea5" style=" color: #f1d619;"><strong> </strong>  </p>
+        </div>
+         <form action="#" onsubmit="handleOnClick();return false">    
+        <div id="myDiv" class="w3layouts-two-grids">
+                <div class="mid-class">
+                <div style="background-color:#0f0f14e6;" class="txt-left-side">
+                        <!-- <form id="hi"  action="# method="post"> -->
+                            <div class="form-left-to-w3l">
+                                <!-- <span class="fa fa-envelope-o" aria-hidden="true"></span> -->
+                                <span class="material-icons">
+                                    person
+                                </span>
+                                <input id="unam" type="text" name="username" placeholder="Name" required="true">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-left-to-w3l ">
+                                <!-- <span class="fa fa-lock" aria-hidden="true"></span> -->
+                                <span class="material-icons">
+                                    location_on
+                                </span>
+                                <input id="country" type="text" name="country" placeholder="country" required>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-left-to-w3l">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                                <input id="mail" type="email" name="email" placeholder="Email" required >
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-left-to-w3l ">
+                                <span class="fa fa-lock" aria-hidden="true"></span>
+                                <input id="pass" type="password" name="password" placeholder="Password" required >
+                                <div class="clear"></div>
+                            </div>
+                            <div class="main-two-w3ls">
+                            </div>
+                            <div class="btnn">
+                                <button id ="clickMe" class="btn btn-primary" type="submit">REGISTER</button>
+                            </div>
+                        <!-- </form> -->
+                    </div>
+                    <div style="background-color:#1231508f"class="img-right-side">
+                    <img src="images/real2.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+        </form>
+    </body>
+    <script>
+        function handleOnClick(){
+            var username=document.getElementById("unam").value;
+            var country=document.getElementById("country").value;
+            var email=document.getElementById("mail").value;
+            var pass=document.getElementById("pass").value;
+
+            var person = {username, country,  email};
+            console.log(person);
+
+            document.getElementById("myDiv").style.opacity = "0.0";
+            document.getElementById("qwerty").style.backgroundImage = "url('images/stadium.jpg')";
+            document.getElementById("hea").innerHTML = "WELCOME TO SANTIAGO BERNABEU";
+            document.getElementById("hea2").innerHTML = "Hello,"+person.username;
+            document.getElementById("hea3").innerHTML = "from "+person.country;
+            document.getElementById("hea4").innerHTML = "We will be communicating with you on "+person.email;
+            document.getElementById("hea5").innerHTML = "Real Madrid Club de Fútbol  commonly referred to as Real Madrid, is a Spanish professional football club based"+
+            "in Madrid.Founded on 6 March 1902 as Madrid Football Club, the club has traditionally worn a white home kit since inception. The word real is Spanish for royal"+
+            " and was bestowed to the club by King Alfonso XIII in 1920 together with the royal crown in the emblem. The team has played its home matches in the 81,044-capacity Santiago Bernabéu Stadium in downtown Madrid since 1947."+
+            " Unlike most European sporting entities, Real Madrid's members (socios) have owned and operated the club throughout its history.The club was estimated to be worth €3.8 billion ($4.2 billion) in 2019, and it was the second highest-earning football"+
+            " club in the world, with an annual revenue of €757,3 million in 2019.[6][7] The club is one of the most widely supported teams in the world.[8] Real Madrid is one of three founding members of La Liga that have never been relegated from the top division since its"+
+            " inception in 1929, along with Athletic Bilbao and Barcelona. The club holds many long-standing rivalries, most notably El Clásico with Barcelona and El Derbi with Atlético Madrid.";
+
+
+        }
+    </script>
+</html>
